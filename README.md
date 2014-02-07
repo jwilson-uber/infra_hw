@@ -1,4 +1,6 @@
-web_serv-ctl.py --help for details. An example call:
+web_serv-ctl.py --help for details.
+
+An example call:
 
 ./web_serv-ctl.py -a 127.0.0.1 -p 8000 -e ./fortune.py start
 Running Web_Serv.py....
