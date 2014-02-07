@@ -23,13 +23,20 @@ def main():
 
     options, args = get_opts()
 
+    if len(args) == 0:
+        print "Missing start or stop verb"
+        sys.exit(1)
     if not args[0].lower() in ('start', 'stop'):
         print 'Command option must be either \'start\' or \'stop\''
         sys.exit(1)
-
-    print 'Running Web_Serv.py....'
-    server = Web_Serv(options.address, options.port, options.ext_prog)
-    server.run()
+    else:
+        if args[0].lower() == 'start':
+            print 'Running Web_Serv.py....'
+            server = Web_Serv(options.address, options.port, options.ext_prog)
+            server.run()
+        else:
+            print 'Stop functionality is not yet supported'
+            sys.exit(1)
 
 if __name__ == "__main__":
     main()
